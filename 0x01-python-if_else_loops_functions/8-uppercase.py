@@ -12,6 +12,8 @@ def uppercase(str):
     """ Converts string to uppercase """
     for i in str:
         if islower(i):
-            print("{}".format(chr(ord(i) - 32)), end="")
+            c = chr(ord(i) - 32)
         else:
-            print("{}".format(i), end="")
+            c = chr(i)
+        print("{}".format(c), end="")
+    print()
