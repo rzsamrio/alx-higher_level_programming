@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * insert_node - inserts ode in an ascending list
  * @head: address of head node
@@ -15,7 +14,7 @@ listint_t *insert_node(listint_t **head, int number)
 	new = malloc(sizeof(listint_t)); /* init node */
 	if (new == NULL)
 		return (NULL);
-	if (number < (*head)->n)	/* compare number with head */
+	if (*head == NULL || number < (*head)->n)	/* compare number with head */
 	{
 		new->n = number;
 		new->next = curr;
