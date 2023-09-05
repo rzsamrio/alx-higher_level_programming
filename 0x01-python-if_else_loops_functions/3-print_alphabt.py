@@ -5,4 +5,4 @@ for i in range(97, 123):
     match i:
         case 101 | 113:
             continue
-    print(chr(i), end='')
+    print("{}".format(chr(i)), end='')
