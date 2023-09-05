@@ -1,2 +1,4 @@
+#!/usr/bin/python3
 def add(a, b):
-	return a + b
+	"""Returns a sum"""
+    return a + b
