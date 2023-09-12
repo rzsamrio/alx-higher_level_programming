@@ -8,6 +8,6 @@ def no_c(my_string):
     lnum = string.count('c')  # loop num
     while lnum:
         index = string.index('c')
-        del(string[index])
+        del string[index]
         lnum -= 1
     return "".join(string)
