@@ -1,0 +1,8 @@
+#!/bin/bash
+echo 'import os
+import py_compile
+file = os.getenv("PYFILE")
+title = file[:-3]
+py_compile.compile(file, "./{}.pyc".format(title))' | /usr/bin/python3
+echo compiling $PYFILE ...
+export PYFILEc=$PYFILE'c'
