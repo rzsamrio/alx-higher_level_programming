@@ -1,2 +1,6 @@
 # Temporary files
 *.swp
+# Folder
+*/__pycache__
+# Test files
+test.py
