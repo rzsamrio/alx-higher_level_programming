@@ -8,16 +8,29 @@ class Square:
     Args:
         size (int): the dimensions of square object"""
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+        self.__position = position
 
     def area(self):
         """ Calculates the Area of the square object"""
         return self.__size * self.__size
+
+    def my_print(self):
+        """ Print the square using # characters """
+        if self.__size == 0:
+            print()
+            return
+        for i in range(self.__size):
+            for i in range(self.__position[0]):
+                print(" ", end='')
+            for j in range(self.__size):
+                print("#", end='')
+            print()
 
     @property
     def size(self):
@@ -33,11 +46,14 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    def my_print(self):
-        if self.__size == 0:
-            print()
-            return
-        for i in range(self.__size):
-            for j in range(self.__size):
-                print("#", end='')
-            print()
+    @property
+    def position(self):
+        """ The position setter """
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """ Set position"""
+        if type(value) is not tuple and len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
