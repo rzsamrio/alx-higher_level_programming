@@ -1,35 +1,21 @@
 #include "lists.h"
 
+/**
+ * check_cycle - checks for a cycle in the singly linked list
+ * @list: list to check
+ * Return: 1 if cycle and 0 if not
+ */
+
 int check_cycle(listint_t *list)
 {
-	int i, j, len;
-	listint_t **addr, **tmp, *current = list;
+	listint_t *tmp, *head = list;
 
-	len = 10;
-	addr = malloc(sizeof(listint_t *) * len);
-	for (i = 0; current != NULL; i++)
+	tmp = head->next;
+	while (tmp != NULL)
 	{
-		if (i == len) /* Realloc? */
-		{
-			len += 10;
-			tmp = malloc(sizeof(listint_t *) * len);
-			for (j = 0; j < (len - 10); j++)
-				tmp[j] = addr[j];
-			free(addr);
-			addr = tmp;
-		}
-
-		for (j = 0; j < i; j++) /* Check the saved address list for a match */
-		{
-			if (current == addr[j])
-			{
-				free(addr);
-				return (1);
-			}
-		}
-		addr[i] = current;
-		current = current->next;
+		if (tmp == head)
+			return (1);
+		tmp = tmp->next;
 	}
-	free(addr);
-	return (0); /* Program is O(n^2) */
+	return (0);
 }
