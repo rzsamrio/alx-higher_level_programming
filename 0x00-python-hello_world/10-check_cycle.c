@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * check_cycle - checks for a cycle in the singly linked list
  * @list: list to check
@@ -8,17 +7,21 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *tmp, *head = list;
+	listint_t *tmp, *s2; /* s2: step twice */
 
 	if (list == NULL)
 		return (0);
 
-	tmp = head->next;
-	while (tmp != NULL)
+	tmp = list->next;
+	s2 = tmp->next->next;
+	while (s2 != NULL || tmp != NULL)
 	{
-		if (tmp == head)
+		if (tmp == list || s2 == tmp)
 			return (1);
 		tmp = tmp->next;
+		if (s2->next == NULL || s2->next->next == NULL)
+			break;
+		s2 = s2->next->next;
 	}
 	return (0);
 }
