@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 /**
  * is_palindrome - Checks if a singly linked list is a palindrome
  * @head: address of the head node
@@ -11,7 +10,7 @@ int is_palindrome(listint_t **head)
 {
 	int i, len, centre, stop, iter,  stat = 1;
 	listint_t *curr;
-	int *arr;
+	int arr[5120]; /* Inefficient memory handling */
 
 	if (*head == NULL)
 		return (1);
@@ -25,7 +24,6 @@ int is_palindrome(listint_t **head)
 		centre =  (len / 2) + 1;
 
 	iter = len % 2 == 0 ? centre - 1 : centre - 2;
-	arr = malloc(sizeof(int) * (centre));
 
 	curr = *head;
 	for (i = 0, stop = centre; i < len; i++)
