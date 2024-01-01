@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Square: A 2 dimensional shape that can be used to perform greometric
-    operations on"""
+    operations on """
 
 
 class Square:
@@ -14,6 +14,11 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+
+        if type(position) is not tuple or len(position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if any(type(x) is not int or x < 0 for x in position):
+            raise ValueError("position must be a tuple of 2 positive integers")
         self.__position = position
 
     def area(self):
@@ -54,6 +59,8 @@ class Square:
     @position.setter
     def position(self, value):
         """ Set position"""
-        if type(value) is not tuple and len(value) != 2:
+        if type(value) is not tuple or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if any(type(x) is not int or x < 0 for x in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
