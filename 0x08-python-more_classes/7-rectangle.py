@@ -32,7 +32,7 @@ class Rectangle:
             return ""
         for i in range(self.height):
             for j in range(self.width):
-                disp += "{}".format(Rectangle.print_symbol)
+                disp += str(self.print_symbol)
             if i != self.height - 1:
                 disp += "\n"
         return disp
