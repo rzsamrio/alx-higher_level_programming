@@ -1,0 +1,30 @@
+The ``5-text_indentation`` module
+==================================
+
+Using ``text_indentation``
+--------------------------
+
+Import:
+    >>> text_indentation  = __import__('5-text_indentation').text_indentation
+
+Test Non-String
+    >>> text_indentation(67)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+    >>> text_indentation("")
+    >>> text_indentation("Writing tests? Test 2 sentences.")
+    Writing tests?
+    <BLANKLINE>
+    Test 2 sentences.
+    <BLANKLINE>
+    >>> text_indentation("""Python: A programming language used to define objects.\
+    ... Is this a dumb definition? Yeah, it is.""")
+    Python:
+    <BLANKLINE>
+    A programming language used to define objects.
+    <BLANKLINE>
+    Is this a dumb definition?
+    <BLANKLINE>
+    Yeah, it is.
+    <BLANKLINE>

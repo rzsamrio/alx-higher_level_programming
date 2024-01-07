@@ -6,32 +6,32 @@ Using ``add_integer``
 
 Import ``add_integer`` from the ``0-add_integer`` module
 
-	>>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
 
 Test for Invalid types
-	>>> add_integer("Hi", "Hello")
-	Traceback (most recent call last):
-		...
-	TypeError: a must be an integer
-	>>> add_integer(5, "No")
-	Traceback (most recent call last):
-		...
-	TypeError: b must be an integer
-	>>> add_integer([2, 3], 9)
-	Traceback (most recent call last):
-		...
-	TypeError: a must be an integer
+    >>> add_integer("Hi", "Hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    >>> add_integer(5, "No")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+    >>> add_integer([2, 3], 9)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
 
 Test ints and floats
-	>>> add_integer(2, 3)
-	5
-	>>> add_integer(3.7, 9)
-	12
-	>>> add_integer(-2.9, 8.4)
-	6
+    >>> add_integer(2, 3)
+    5
+    >>> add_integer(3.7, 9)
+    12
+    >>> add_integer(-2.9, 8.4)
+    6
 
 Test single digit
-	>>> add_integer(3)
-	101
-	>>> add_integer(9)
-	107
+    >>> add_integer(3)
+    101
+    >>> add_integer(9)
+    107
