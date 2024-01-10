@@ -1,4 +1,4 @@
-The ```7-base_geometry`` Module
+The ``7-base_geometry`` Module
 ===============================
 
 Usin BaseGeometry
@@ -15,10 +15,14 @@ Correct and incorect number types
     >>> bg.integer_validator("Negative", -99)
     Traceback (most recent call last):
     ...
-    ValueError: Zero must be greater than 0
+    ValueError: Negative must be greater than 0
 
 Other Types
     >>> bg.integer_validator("SS", "string")
     Traceback (most recent call last):
     ...
     TypeError: SS must be an integer
+    >>> bg.integer_validator("Floater", 4.6)
+    Traceback (most recent call last):
+    ...
+    TypeError: Floater must be an integer
