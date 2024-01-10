@@ -18,4 +18,4 @@ def text_indentation(text):
             print(text[c:i + 1] + "\n")
             set = 0
     if set == 1:
-        print(text[c:])
+        print(text[c:], end='')
