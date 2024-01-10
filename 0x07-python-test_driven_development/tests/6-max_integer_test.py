@@ -10,5 +10,7 @@ class Testfunction(unittest.TestCase):
         self.assertRaises
     def test_val(self):
         self.assertAlmostEqual(max_integer([1, 5, 9, 24, 2, 6]), 24)
+        self.assertAlmostEqual(max_integer([1, 5, 2, 6, 9]), 9)
         self.assertAlmostEqual(max_integer([-1, -7, -11]), -1)
         self.assertAlmostEqual(max_integer([]), None)
+        self.assertAlmostEqual(max_integer([0]), 0)
