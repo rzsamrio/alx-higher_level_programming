@@ -2,6 +2,6 @@
 """ Contains an empty class """
 
 
-def BaseGeometry():
+class BaseGeometry:
     """ ' I know th plans i have for you ' """
     pass
