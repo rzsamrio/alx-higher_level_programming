@@ -28,3 +28,9 @@ Test Non-String
     <BLANKLINE>
     Yeah, it is.
     <BLANKLINE>
+
+One Argument
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
