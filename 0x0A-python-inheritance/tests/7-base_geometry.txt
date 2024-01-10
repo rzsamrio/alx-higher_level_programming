@@ -1,0 +1,24 @@
+The ```7-base_geometry`` Module
+===============================
+
+Usin BaseGeometry
+-------------------
+
+    >>> bg = __import__('7-base_geometry').BaseGeometry
+    
+Correct and incorect number types
+    >>> bg.integer_validator("Correct", 90)
+    >>> bg.integer_validator("Zero", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: Zero must be greater than 0
+    >>> bg.integer_validator("Negative", -99)
+    Traceback (most recent call last):
+    ...
+    ValueError: Zero must be greater than 0
+
+Other Types
+    >>> bg.integer_validator("SS", "string")
+    Traceback (most recent call last):
+    ...
+    TypeError: SS must be an integer
