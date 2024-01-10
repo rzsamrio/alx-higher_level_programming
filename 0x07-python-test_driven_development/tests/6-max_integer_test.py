@@ -13,4 +13,4 @@ class Testfunction(unittest.TestCase):
         self.assertAlmostEqual(max_integer([1, 5, 2, 6, 9]), 9)
         self.assertAlmostEqual(max_integer([-1, -7, -11]), -1)
         self.assertAlmostEqual(max_integer([]), None)
-        self.assertAlmostEqual(max_integer([0]), 0)
+        self.assertAlmostEqual(max_integer([9]), 9)
