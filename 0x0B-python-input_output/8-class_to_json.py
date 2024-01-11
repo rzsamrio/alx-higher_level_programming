@@ -3,6 +3,7 @@
 
 
 def class_to_json(obj):
-	""" Function thst converts """
-	import json
-	return json.dumps(obj.__dict__)
+    """ Function thst converts """
+    import json
+    json_str = json.dumps(obj.__dict__)
+    return json.loads(json_str)
