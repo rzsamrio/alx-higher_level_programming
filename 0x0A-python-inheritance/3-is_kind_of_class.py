@@ -7,7 +7,7 @@ def is_kind_of_class(obj, a_class):
         Else returns false """
     x = 0
     try:
-        while(dir(a_class)[x]):
+        while (dir(a_class)[x]):
             try:
                 dir(obj).index(dir(a_class)[x])
             except ValueError:
