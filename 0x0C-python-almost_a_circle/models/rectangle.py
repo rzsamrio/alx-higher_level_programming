@@ -47,8 +47,8 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ Update the properties of the object """
         if not args:
-            for prop, val in kwargs.items():
-                match prop:
+            for key, val in kwargs.items():
+                match key:
                     case "width":
                         self.width = val
                     case "height":
