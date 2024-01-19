@@ -47,20 +47,9 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ Update the properties of the object """
         if not args:
-            for key, val in kwargs.items():
-                match key:
-                    case "width":
-                        self.width = val
-                    case "height":
-                        self.height = val
-                    case "id":
-                        self.id = val
-                    case "x":
-                        self.x = val
-                    case "y":
-                        self.y = val
-                    case _:
-                        pass
+            for key in kwargs:
+                if key in ["id", "width", "height", "x", "y"]:
+                    setattr(self, key, kwargs[key])
             return
         for i, arg in enumerate(args):
             match i:

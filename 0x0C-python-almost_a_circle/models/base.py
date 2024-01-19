@@ -20,7 +20,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """ Returns the JSON form of a list of dictionaries """
         if not list_dictionaries:
-            return "{}"
+            return "[]"
         return json.dumps(list_dictionaries)
 
     def save_to_file(cls, list_objs):
