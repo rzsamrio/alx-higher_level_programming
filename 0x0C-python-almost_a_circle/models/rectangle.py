@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Module defines the rectangle class """
-
+""" Module defines the rectangle sub-class """
 from models.base import Base
 
 
