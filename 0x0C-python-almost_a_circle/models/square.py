@@ -23,33 +23,22 @@ class Square(Rectangle):
             self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
-        """ Update the properties of Instance """
+        """ Update the properties of the object """
         if not args:
-            for prop, val in kwargs.items():
-                match prop:
-                    case "size":
-                        self.size = val
-                    case "id":
-                        self.id = val
-                    case "x":
-                        self.x = val
-                    case "y":
-                        self.y = val
-                    case _:
-                        pass
+            for key in kwargs:
+                if key in ["id", "width", "height", "x", "y"]:
+                    setattr(self, key, kwargs[key])
             return
-        for i, arg in enumerate(args):
-            match i:
-                case 0:
-                    self.id = arg
-                case 1:
-                    self.size = arg
-                case 2:
-                    self.x = arg
-                case 3:
-                    self.y = arg
-                case _:
-                    pass
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.width = args[1]
+        if len(args) > 2:
+            self.height = args[2]
+        if len(args) > 3:
+            self.x = args[3]
+        if len(args) > 4:
+            self.y = args[4]
 
     def to_dictionary(self):
         """ Return a dictionary of Instance properties """
