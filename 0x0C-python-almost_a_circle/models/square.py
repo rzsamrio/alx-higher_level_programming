@@ -26,7 +26,7 @@ class Square(Rectangle):
         """ Update the properties of the object """
         if not args:
             for key in kwargs:
-                if key in ["id", "width", "height", "x", "y"]:
+                if key in ["id", "size", "x", "y"]:
                     setattr(self, key, kwargs[key])
             return
         if len(args) > 0:
