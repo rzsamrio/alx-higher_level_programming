@@ -19,6 +19,4 @@ class Student:
 
     def to_json(self):
         """ Returns the dictionary form of the data structure """
-        import json
-        json_str = json.dumps(self.__dict__)
-        return json.loads(json_str)
+        return self.__dict__
