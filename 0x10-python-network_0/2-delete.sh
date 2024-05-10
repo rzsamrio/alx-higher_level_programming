@@ -1,3 +1,3 @@
 #!/bin/bash
 # Sed delete request
-curl -LXs "DELETE" "$1"
+curl -sX "DELETE" "$1"
