@@ -1,3 +1,3 @@
 #!/bin/bash
-# Request and display body if HTTP Response is 200 OK
-curl -Xs DELETE "$1"
+# Sed delete request
+curl -Xs "DELETE" "$1"
