@@ -8,4 +8,4 @@ with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as url:
 print("Body response:")
 print("\t- type: " + str(type(body)))
 print("\t- content: " + str(body))
-print("\t- utf8 content: " + str(body.decode()))
+print("\t- utf8 content: " + str(body.decode('utf-8')))
