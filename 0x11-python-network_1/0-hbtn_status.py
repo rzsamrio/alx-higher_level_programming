@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Make a request to https://alx-intranet.hbtn.io/status."""
-from urllib.request import urlopen
+# Get the content of a url
+# curl equiv: `curl <url>` but with formatting
 
-if __name__ == '__main__':
-    with urlopen("https://alx-intranet.hbtn.io/status") as resp:
-        body = resp.read()
-        print("Body response:")
-        print(f"\t- type: {type(body)}")
-        print(f"\t- content: {body}")
-        print(f"\t- utf8 content: {body.decode('utf-8')}")
+import urllib.request
+with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as url:
+    body = url.read()
+print("Body response:")
+print("\t- type: " + str(type(body)))
+print(" - content: " + str(body))
+print(" - utf8 content: " + str(body)[2:4])
