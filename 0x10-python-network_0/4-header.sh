@@ -1,3 +1,3 @@
 #!/bin/bash
-# Send GET request with data that would otherwise be sent as a post request
-curl -sGH "X-School-User-Id=98" "$1"
+# Set header variable (defaults to a GET request)
+curl -sH "X-School-User-Id:98" "$1"
