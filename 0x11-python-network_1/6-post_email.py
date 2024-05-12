@@ -5,5 +5,5 @@ import requests
 
 if __name__ == '__main__':
     var = {'email': sys.argv[2]}
-    req = requests.get(sys.argv[1], params=var)
+    req = requests.post(sys.argv[1], data=var)
     print(req.text)
