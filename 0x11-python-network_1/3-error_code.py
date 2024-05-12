@@ -2,7 +2,7 @@
 """ Handle error code with GET requests """
 from sys import argv
 from urllib.error import HTTPError, URLError
-import urllib.reqest
+import urllib.request
 
 if __name__ == '__main__':
     try:
